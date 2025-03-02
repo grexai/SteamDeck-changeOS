@@ -20,20 +20,28 @@ sudo efibootmgr
 
 Find Windows Boot Manager (BootXXXX* Windows Boot Manager).
 
-change .ps1 to your number
+In the .ps1 script change it to your number mine was 5fbc7031-68dd-11ef-a6bc-baf79f51b1b4
 
-Create a shortcut and and in properties/advances tick run as admin
+```
+Start-Process "bcdedit" -ArgumentList "/set `"{fwbootmgr}`" bootsequence `"{5fbc7031-68dd-11ef-a6bc-baf79f51b1b4}`"" -NoNewWindow -Wait
+Start-Process "bcdedit" -ArgumentList "/set `"{fwbootmgr}`" displayorder `"{5fbc7031-68dd-11ef-a6bc-baf79f51b1b4}`" /addfirst" -NoNewWindow -Wait
+```
+
+Create a shortcut and in Properties/advanced tick run as admin
 
 
 ## SteamOS script
 
-Find Windows efi number
-change the efi number in the .sh file
-
-run the following command in the terminal to list 
+Find Windows's efi number
+Run the following command in the terminal to list 
 ```
 efibootmgr 
 ```
+Replace you number (mine was 0002) in the following line in the .sh file:
+```
+sudo efibootmgr --bootnext 0002 && reboot
+```
+
 Enable to run efibootmgr as sudo without requiring sudo.
 sudo EDITOR=nano visudo
 Add the following line to the end of the document:
