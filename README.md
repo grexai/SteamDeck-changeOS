@@ -6,6 +6,11 @@ By default, Windows modifies the boot order to prioritize itself, requiring manu
 A PowerShell script (.ps1) for Windows that reboots directly into SteamOS.
 A Bash script (.sh) for SteamOS that reboots directly into Windows.
 
+## demo 
+
+[![Watch on YouTube](https://img.youtube.com/vi/k7LyJSCFUoo/0.jpg)](https://youtu.be/k7LyJSCFUoo)
+
+
 
 ## Windows script
 
@@ -66,6 +71,7 @@ chmod +x reboot-to-windows.sh
 ```
 ### add to Gaming mode
 Open Steam and add the .sh file as a non-Steam game. Now, you can also use it in Gaming mode.
+
 
 
 When booting into Windows, the system sets Windows as the default OS. If you don’t run the script before restarting, Windows will continue to load by default until you manually change the boot order in the BIOS.
