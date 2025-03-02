@@ -13,9 +13,21 @@ Install WSL
 
 enable sudo in settings/system/for developers
 
-Run in powershell.
+Run in Powershell.
 ```
 sudo efibootmgr
+```
+This is an example output
+```
+Windows Boot Loader
+--------------------
+identifier              {current}
+description             Windows 11
+
+Windows Boot Loader
+--------------------
+identifier              {abcd1234-5678-9abc-def012345678}
+description             Ubuntu
 ```
 
 Find Windows Boot Manager (BootXXXX* Windows Boot Manager).
