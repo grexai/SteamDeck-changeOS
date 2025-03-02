@@ -7,7 +7,7 @@ A PowerShell script (.ps1) for Windows that reboots directly into SteamOS.
 A Bash script (.sh) for SteamOS that reboots directly into Windows.
 
 
-## How windows script
+## Windows script
 
 Install WSL
 
